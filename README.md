@@ -6,11 +6,11 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ## Tech Stack
 
-- **Frontend:** React.js + Material UI + Redux.js + Axios
-- **Backend:** Node.js + Express.js + GraphQL
+- **Frontend:** React.js + Material UI (React Router, Axios, Dayjs)
+- **Backend:** Node.js + Express.js (bcrypt, dotenv, jsonwebtoken, moongoose, jest, nodemon)
 - **Database:** MongoDB (Atlas)
 - **Authentication:** JWT-based Auth (with role-based access control)
-- **Deployment:** AWS (EC2, S3, Route 53, MongoDB Atlas)
+- **Deployment:** Server - AWS (EC2) and Client - Vercel
 - **DevOps:** GitHub Actions (CI/CD)
 - **Security:** HTTPS, JWT, basic data encryption at rest (MongoDB)
 
@@ -70,30 +70,31 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ## Agile Sprint Plan
 
-###  Sprint 0 – Planning & Architecture
+### Sprint 0 – Planning & Architecture
 
 - ✅ Requirements & features defined
 - ✅ Tech stack finalized
 - ✅ High-level architecture & folder structure
 - ✅ Initial README documentation
-- ⬜ MongoDB schema definitions
+- ✅ MongoDB schema definitions
 - ⬜ API contract (OpenAPI/Swagger)
-- ⬜ GitHub repo and CI/CD setup
+- ✅ GitHub repo and CI/CD setup
 
 ### Sprint 1 – Core Features
 
-- [ ] Auth system (JWT, role-based)
-- [ ] Patient dashboard (appointments, tips)
-- [ ] Profile management (CRUD)
-- [ ] Doctor dashboard (view-only)
+- ✅ Auth system (JWT, role-based)
+- ✅ Patient dashboard (appointments, tips)
+- ✅ Profile management (CRUD)
+- ✅ Backend Unit Test cases
+- ✅ Doctor dashboard (view-only)
 
 ### Sprint 2 – Enhancements & Deployment
 
-- [ ] Public health info page
-- [ ] Appointment request system
-- [ ] Logging middleware
-- [ ] Deploy backend/frontend to AWS
-- [ ] CI/CD integration
+- ⬜ Public health info page
+- ✅ Appointment request system
+- ⬜ Logging middleware
+- ✅ Deploy backend to AWS/frontend to Vercel
+- ✅ CI/CD integration
 
 ---
 
@@ -101,24 +102,20 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ### Backend API Routes
 
-```
-/auth
-  - POST /register
-  - POST /login
+#### Auth Routes (`/auth`)
+- `POST /auth/register` — Register a new user (patient or provider)
+- `POST /auth/login` — Login and receive JWT token
 
-/patient
-  - GET /dashboard
-  - GET /profile
-  - PUT /profile
-  - POST /appointments
+#### Appointment Routes (`/appointments`)
+- `POST /appointments/book` — Book a new appointment (authenticated)
+- `GET /appointments/my` — Get patient's own appointments (authenticated)
+- `GET /appointments/all` — Get all appointments (provider only)
 
-/provider
-  - GET /patients
-  - GET /patients/:id
-
-/public
-  - GET /health-info
-```
+#### User Routes (`/users`)
+- `GET /users/me` — Get current user's profile (authenticated)
+- `PUT /users/me` — Update current user's profile (authenticated)
+- `GET /users/all` — Get all users (provider only)
+- `GET /users/providers` — Get all providers (public)
 
 ---
 
@@ -173,7 +170,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ---
 
-##  AWS Infrastructure Plan
+## AWS Infrastructure Plan
 
 - **EC2:** Host Node.js backend
 - **S3:** Optional, for static file hosting
@@ -187,15 +184,15 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 ```bash
 # Clone
 git clone https://github.com/mukilanr/healthcare-portal
-cd patient-portal
+cd healthcare-portal
 
 # Start frontend
-cd frontend
+cd client
 npm install
 npm start
 
 # Start backend
-cd backend
+cd server
 npm install
 npm run dev
 ```
