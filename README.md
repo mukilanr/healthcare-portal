@@ -4,7 +4,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Frontend:** React.js + Material UI + Redux.js + Axios
 - **Backend:** Node.js + Express.js + GraphQL
@@ -16,7 +16,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ---
 
-## 🎯 Key Features to Implement
+## Key Features to Implement
 
 ### 1. Secure Authentication System
 
@@ -35,7 +35,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 - View and edit profile
 - Fields: age, allergies, current medications
 
-### 4. Healthcare Provider Dashboard
+### 4. Healthcare Doctor Dashboard
 
 - View list of patients (mock data)
 - View-only patient profile
@@ -68,7 +68,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ---
 
-## 🔁 Agile Sprint Plan
+## Agile Sprint Plan
 
 ### 🏗️ Sprint 0 – Planning & Architecture
 
@@ -80,14 +80,14 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 - ⬜ API contract (OpenAPI/Swagger)
 - ⬜ GitHub repo and CI/CD setup
 
-### 🏁 Sprint 1 – Core Features
+### Sprint 1 – Core Features
 
 - [ ] Auth system (JWT, role-based)
 - [ ] Patient dashboard (appointments, tips)
 - [ ] Profile management (CRUD)
-- [ ] Provider dashboard (view-only)
+- [ ] Doctor dashboard (view-only)
 
-### 🚀 Sprint 2 – Enhancements & Deployment
+### Sprint 2 – Enhancements & Deployment
 
 - [ ] Public health info page
 - [ ] Appointment request system
@@ -97,7 +97,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ---
 
-## 🧠 System Design
+## System Design
 
 ### Backend API Routes
 
