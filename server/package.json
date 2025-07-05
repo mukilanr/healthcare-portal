@@ -4,6 +4,7 @@
   "main": "index.js",
   "proxy": "http://localhost:5000",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "jest"
   },
