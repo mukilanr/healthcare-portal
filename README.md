@@ -1,10 +1,10 @@
-# 🏥 Healthcare Patient Portal
+# Healthcare Patient Portal
 
 A secure and scalable MERN-based healthcare patient portal that enables patients to manage health records and healthcare providers to administer care. Built with an Agile process over two sprints and deployed to AWS.
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Frontend:** React.js + Material UI + Redux.js + Axios
 - **Backend:** Node.js + Express.js + GraphQL
@@ -16,7 +16,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ---
 
-## 🎯 Key Features to Implement
+## Key Features to Implement
 
 ### 1. Secure Authentication System
 
@@ -68,9 +68,9 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ---
 
-## 🔁 Agile Sprint Plan
+## Agile Sprint Plan
 
-### 🏗️ Sprint 0 – Planning & Architecture
+###  Sprint 0 – Planning & Architecture
 
 - ✅ Requirements & features defined
 - ✅ Tech stack finalized
@@ -80,14 +80,14 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 - ⬜ API contract (OpenAPI/Swagger)
 - ⬜ GitHub repo and CI/CD setup
 
-### 🏁 Sprint 1 – Core Features
+### Sprint 1 – Core Features
 
 - [ ] Auth system (JWT, role-based)
 - [ ] Patient dashboard (appointments, tips)
 - [ ] Profile management (CRUD)
 - [ ] Provider dashboard (view-only)
 
-### 🚀 Sprint 2 – Enhancements & Deployment
+### Sprint 2 – Enhancements & Deployment
 
 - [ ] Public health info page
 - [ ] Appointment request system
@@ -97,7 +97,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ---
 
-## 🧠 System Design
+## System Design
 
 ### Backend API Routes
 
@@ -173,7 +173,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ---
 
-## ☁️ AWS Infrastructure Plan
+##  AWS Infrastructure Plan
 
 - **EC2:** Host Node.js backend
 - **S3:** Optional, for static file hosting
@@ -182,7 +182,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 
 ---
 
-## 🧪 Local Development
+## Local Development
 
 ```bash
 # Clone
