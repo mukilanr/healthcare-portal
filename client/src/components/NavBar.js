@@ -19,7 +19,6 @@ const Navbar = () => {
         >
           HealthCare Portal
         </Typography>
-
         <Box>
           <Button
             color="inherit"
