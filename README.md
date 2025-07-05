@@ -1,6 +1,6 @@
 # Healthcare Patient Portal
 
-A secure and scalable MERN-based healthcare patient portal that enables patients to manage health records and healthcare providers to administer care. Built with an Agile process over two sprints and deployed to AWS.
+A secure and scalable MERN-based healthcare patient portal that enables patients to manage health records and healthcare providers to administer care. Built with an Agile process over two sprints and deployed to AWS and Vercel.
 
 ---
 
