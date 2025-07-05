@@ -7,13 +7,14 @@ import {
   Box,
   MenuItem,
   Alert,
+  CircularProgress,
 } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const navigate = useNavigate();
-
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -34,7 +35,6 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic client-side validation
     if (!form.name || !form.email || !form.password || !form.confirmPassword) {
       setError("All fields are required.");
       return;
@@ -51,6 +51,7 @@ const Register = () => {
     }
 
     try {
+      setLoading(true);
       await axios.post("/api/auth/register", {
         name: form.name,
         email: form.email,
@@ -62,6 +63,8 @@ const Register = () => {
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
       setError(err.response?.data?.message || "Registration failed");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -134,10 +137,16 @@ const Register = () => {
             fullWidth
             color="primary"
             sx={{ mt: 2 }}
+            disabled={loading}
           >
-            Register
+            {loading ? (
+              <CircularProgress size={24} color="inherit" />
+            ) : (
+              "Register"
+            )}
           </Button>
         </form>
+
         <Button
           variant="text"
           fullWidth
