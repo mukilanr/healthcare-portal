@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
         <Route
           path="/patient-dashboard"
           element={
@@ -29,6 +30,7 @@ function App() {
             </PrivateRoute>
           }
         />
+
         <Route
           path="/doctor-dashboard"
           element={
@@ -37,6 +39,7 @@ function App() {
             </PrivateRoute>
           }
         />
+
         <Route path="*" element={<Login />} />
       </Routes>
     </Router>

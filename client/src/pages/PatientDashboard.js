@@ -69,22 +69,36 @@ const PatientDashboard = () => {
         ) : (
           <Grid container spacing={2}>
             {appointments.map((appt, idx) => (
-              <Grid item xs={12} sm={6} md={3} key={idx}>
-                <Card>
+              <Grid item xs={12} sm={6} md={4} key={idx}>
+                <Card
+                  sx={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                  }}
+                >
                   <CardContent>
-                    <Typography variant="subtitle1">
+                    <Typography variant="subtitle1" fontWeight="bold">
                       Date:{" "}
                       {new Date(appt.appointmentDate).toLocaleDateString()}
                     </Typography>
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" fontWeight="bold">
                       Time:{" "}
                       {new Date(appt.appointmentDate).toLocaleTimeString([], {
                         hour: "2-digit",
                         minute: "2-digit",
                       })}
                     </Typography>
-                    <Typography color="textSecondary">
-                      Reason: {appt.reason || "N/A"}
+                    <Typography
+                      color="textSecondary"
+                      sx={{
+                        wordWrap: "break-word",
+                        whiteSpace: "normal",
+                        mt: 1,
+                      }}
+                    >
+                      <strong>Reason:</strong> {appt.reason || "N/A"}
                     </Typography>
                   </CardContent>
                 </Card>

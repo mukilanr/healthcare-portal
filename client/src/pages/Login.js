@@ -6,13 +6,14 @@ import {
   Typography,
   Box,
   Alert,
+  CircularProgress,
 } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
-
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -40,6 +41,7 @@ const Login = () => {
     }
 
     try {
+      setLoading(true);
       const response = await axios.post("/api/auth/login", {
         email,
         password,
@@ -58,6 +60,8 @@ const Login = () => {
       }
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -105,8 +109,9 @@ const Login = () => {
           fullWidth
           sx={{ mt: 2 }}
           onClick={handleLogin}
+          disabled={loading}
         >
-          Login
+          {loading ? <CircularProgress size={24} color="inherit" /> : "Login"}
         </Button>
 
         <Button

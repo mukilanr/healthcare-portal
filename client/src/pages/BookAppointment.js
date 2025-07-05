@@ -21,6 +21,7 @@ import dayjs from "dayjs";
 import Navbar from "../components/NavBar";
 
 const BookAppointment = () => {
+  const navigate = useNavigate();
   const [appointmentDate, setAppointmentDate] = useState("");
   const [reason, setReason] = useState("");
   const [providerId, setProviderId] = useState("");
@@ -40,8 +41,6 @@ const BookAppointment = () => {
       setAppointmentDate(newValue.toISOString());
     }
   };
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProviders = async () => {
