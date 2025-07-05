@@ -45,3 +45,14 @@ exports.getAllUsers = async (req, res) => {
       .json({ message: "Error fetching users", error: err.message });
   }
 };
+
+exports.getAllProviders = async (req, res) => {
+  try {
+    const providers = await User.find({ role: "provider" }).select(
+      "name email role"
+    );
+    res.status(200).json(providers);
+  } catch (err) {
+    res.status(500).json({ message: "Failed to fetch providers" });
+  }
+};

@@ -35,7 +35,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 - View and edit profile
 - Fields: age, allergies, current medications
 
-### 4. Healthcare Provider Dashboard
+### 4. Healthcare Doctor Dashboard
 
 - View list of patients (mock data)
 - View-only patient profile
@@ -85,7 +85,7 @@ A secure and scalable MERN-based healthcare patient portal that enables patients
 - [ ] Auth system (JWT, role-based)
 - [ ] Patient dashboard (appointments, tips)
 - [ ] Profile management (CRUD)
-- [ ] Provider dashboard (view-only)
+- [ ] Doctor dashboard (view-only)
 
 ### Sprint 2 – Enhancements & Deployment
 
